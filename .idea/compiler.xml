@@ -10,8 +10,12 @@
         <module name="Task1" />
         <module name="Task4" />
         <module name="Task3" />
+        <module name="Task10" />
+        <module name="Task9" />
         <module name="Task6" />
         <module name="Task5" />
+        <module name="Task8" />
+        <module name="Task7" />
       </profile>
     </annotationProcessing>
   </component>

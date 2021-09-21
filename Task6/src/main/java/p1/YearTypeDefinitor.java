@@ -34,7 +34,7 @@ public class YearTypeDefinitor {
                 yearNumber = Integer.parseInt(input);
                 return;
             } else {
-                System.out.println("Type in an integer, please!");
+                System.out.println("Type in a valid year number, please!");
             }
 
         }
