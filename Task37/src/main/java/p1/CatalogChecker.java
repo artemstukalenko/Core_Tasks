@@ -2,7 +2,6 @@ package p1;
 
 import java.io.IOException;
 import java.nio.file.*;
-import java.util.concurrent.Callable;
 
 import static java.nio.file.StandardWatchEventKinds.*;
 

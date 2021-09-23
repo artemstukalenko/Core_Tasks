@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Task20" />
+        <module name="Task40" />
         <module name="Task24" />
         <module name="Task23" />
         <module name="Task22" />
@@ -31,7 +32,9 @@
         <module name="Task10" />
         <module name="Task32" />
         <module name="Task17" />
+        <module name="Task39" />
         <module name="Task16" />
+        <module name="Task38" />
         <module name="Task15" />
         <module name="Task37" />
         <module name="Task14" />
