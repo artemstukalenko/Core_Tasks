@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_301" class="java.beans.XMLDecoder">
+ <object class="p1.Apartment">
+  <void property="address">
+   <string>Telihi 12</string>
+  </void>
+  <void property="description">
+   <string>apartment5</string>
+  </void>
+  <void property="floor">
+   <int>10</int>
+  </void>
+  <void property="price">
+   <double>20000.0</double>
+  </void>
+  <void property="roomCount">
+   <int>4</int>
+  </void>
+ </object>
+</java>

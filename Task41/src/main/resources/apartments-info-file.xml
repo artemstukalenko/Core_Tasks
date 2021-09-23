@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_301" class="java.beans.XMLDecoder">
+ <object class="p1.Apartment">
+  <void property="address">
+   <string>Chokilivskii 1</string>
+  </void>
+  <void property="description">
+   <string>apartment1</string>
+  </void>
+  <void property="floor">
+   <int>5</int>
+  </void>
+  <void property="price">
+   <double>4500.0</double>
+  </void>
+  <void property="roomCount">
+   <int>2</int>
+  </void>
+ </object>
+ <object class="p1.Apartment">
+  <void property="address">
+   <string>Simirenka 14</string>
+  </void>
+  <void property="description">
+   <string>apartment2</string>
+  </void>
+  <void property="floor">
+   <int>1</int>
+  </void>
+  <void property="price">
+   <double>10000.0</double>
+  </void>
+  <void property="roomCount">
+   <int>3</int>
+  </void>
+ </object>
+ <object class="p1.Apartment">
+  <void property="address">
+   <string>Melnikova 5</string>
+  </void>
+  <void property="description">
+   <string>apartment3</string>
+  </void>
+  <void property="floor">
+   <int>4</int>
+  </void>
+  <void property="price">
+   <double>6000.0</double>
+  </void>
+  <void property="roomCount">
+   <int>2</int>
+  </void>
+ </object>
+ <object class="p1.Apartment">
+  <void property="address">
+   <string>Dorogozhizkaya 8</string>
+  </void>
+  <void property="description">
+   <string>apartment4</string>
+  </void>
+  <void property="floor">
+   <int>7</int>
+  </void>
+  <void property="price">
+   <double>5500.0</double>
+  </void>
+  <void property="roomCount">
+   <int>1</int>
+  </void>
+ </object>
+</java>
