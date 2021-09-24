@@ -77,24 +77,5 @@
     </void>
    </object>
   </void>
-  <void method="add">
-   <object class="p1.Apartment">
-    <void property="address">
-     <string>Telihi 8</string>
-    </void>
-    <void property="floor">
-     <int>10</int>
-    </void>
-    <void property="identifier">
-     <string>apartment5</string>
-    </void>
-    <void property="price">
-     <double>7000.0</double>
-    </void>
-    <void property="roomCount">
-     <int>2</int>
-    </void>
-   </object>
-  </void>
  </object>
 </java>

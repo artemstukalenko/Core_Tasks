@@ -55,17 +55,17 @@ public class Apartments4Sale {
         writeAllApartmentsToXml();
     }
 
-    public void rewriteApartmentInXml(Apartment apartment) {
+    public void changeApartment(String identifier, Apartment apartment) {
 
-        try {
-            this.encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(apartmentsInfoFile)));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        for (int i = 0; i < apartmentsForSale.size(); i++) {
+            if (apartmentsForSale.get(i).getIdentifier().equals(identifier)) {
+                apartmentsForSale.remove(i);
+                apartmentsForSale.add(i, apartment);
+                writeAllApartmentsToXml();
+                return;
+            }
         }
 
-        encoder.remove(apartment);
-        encoder.writeObject(apartment);
-        encoder.close();
     }
 
     public void deleteApartment(Apartment apartment) {
@@ -73,7 +73,7 @@ public class Apartments4Sale {
         writeAllApartmentsToXml();
     }
 
-    public List<Apartment> getApartmentsFromXml() {
+    private List<Apartment> getApartmentsFromXml() {
 
         try {
             this.decoder = new XMLDecoder(new BufferedInputStream(new FileInputStream(apartmentsInfoFile)));
