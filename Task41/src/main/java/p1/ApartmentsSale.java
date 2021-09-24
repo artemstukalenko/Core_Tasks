@@ -20,11 +20,14 @@ public class ApartmentsSale {
 
         Apartment apartmentForTest = new Apartment("apartment5", 2, "Telihi 8", 10, 7000.00);
 
-        apartments4Sale.addApartment(apartmentForTest);
+        System.out.println(apartments4Sale.getApartmentsInPriceRange(8000.00, 15000.00));
+        System.out.println(apartments4Sale.getApartmentsWithRoomCountOf(3));
 
-        apartmentForTest.setPrice(7500.00);
-
-        apartments4Sale.changeApartment(apartmentForTest.getIdentifier(), apartmentForTest);
+//        apartments4Sale.addApartment(apartmentForTest);
+//
+//        apartmentForTest.setPrice(7500.00);
+//
+//        apartments4Sale.changeApartment(apartmentForTest.getIdentifier(), apartmentForTest);
 
         //apartments4Sale.deleteApartment(apartmentForTest);
     }

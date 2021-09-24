@@ -3,7 +3,10 @@ package p1;
 import java.beans.XMLDecoder;
 import java.beans.XMLEncoder;
 import java.io.*;
+import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Apartments4Sale {
 
@@ -84,4 +87,16 @@ public class Apartments4Sale {
         return (List<Apartment>) decoder.readObject();
     }
 
+    private List<Apartment> getFilteredApartmentList(Predicate<Apartment> predicate) {
+        return apartmentsForSale.stream().filter(predicate).collect(Collectors.toList());
+    }
+
+    public List<Apartment> getApartmentsInPriceRange(double minPrice, double maxPrice) {
+        return getFilteredApartmentList(apartment -> apartment.getPrice() >= minPrice
+                && apartment.getPrice() <= maxPrice);
+    }
+
+    public List<Apartment> getApartmentsWithRoomCountOf(int desiredRoomCount) {
+        return getFilteredApartmentList(apartment -> apartment.getRoomCount() == desiredRoomCount);
+    }
 }
