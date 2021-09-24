@@ -1,20 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <java version="1.8.0_301" class="java.beans.XMLDecoder">
- <object class="p1.Apartment">
-  <void property="address">
-   <string>Telihi 12</string>
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="p1.Apartment">
+    <void property="address">
+     <string>Simirenka</string>
+    </void>
+    <void property="floor">
+     <int>8</int>
+    </void>
+    <void property="identifier">
+     <string>apartment1</string>
+    </void>
+    <void property="price">
+     <double>1000.0</double>
+    </void>
+    <void property="roomCount">
+     <int>3</int>
+    </void>
+   </object>
   </void>
-  <void property="description">
-   <string>apartment5</string>
+  <void method="add">
+   <object class="p1.Apartment">
+    <void property="address">
+     <string>Zholudeva</string>
+    </void>
+    <void property="floor">
+     <int>3</int>
+    </void>
+    <void property="identifier">
+     <string>apartment2</string>
+    </void>
+    <void property="price">
+     <double>4500.0</double>
+    </void>
+    <void property="roomCount">
+     <int>2</int>
+    </void>
+   </object>
   </void>
-  <void property="floor">
-   <int>10</int>
+  <void method="add">
+   <object class="p1.Apartment">
+    <void property="address">
+     <string>Khreshatyk</string>
+    </void>
+    <void property="floor">
+     <int>6</int>
+    </void>
+    <void property="identifier">
+     <string>apartment3</string>
+    </void>
+    <void property="price">
+     <double>15000.0</double>
+    </void>
+    <void property="roomCount">
+     <int>3</int>
+    </void>
+   </object>
   </void>
-  <void property="price">
-   <double>20000.0</double>
+  <void method="add">
+   <object class="p1.Apartment">
+    <void property="address">
+     <string>Herzena</string>
+    </void>
+    <void property="floor">
+     <int>15</int>
+    </void>
+    <void property="identifier">
+     <string>apartment4</string>
+    </void>
+    <void property="price">
+     <double>8000.0</double>
+    </void>
+    <void property="roomCount">
+     <int>1</int>
+    </void>
+   </object>
   </void>
-  <void property="roomCount">
-   <int>4</int>
+  <void method="add">
+   <object class="p1.Apartment">
+    <void property="address">
+     <string>Telihi 8</string>
+    </void>
+    <void property="floor">
+     <int>10</int>
+    </void>
+    <void property="identifier">
+     <string>apartment5</string>
+    </void>
+    <void property="price">
+     <double>7000.0</double>
+    </void>
+    <void property="roomCount">
+     <int>2</int>
+    </void>
+   </object>
   </void>
  </object>
 </java>

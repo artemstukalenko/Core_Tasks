@@ -5,14 +5,14 @@ import java.util.Objects;
 
 public class Apartment implements Serializable {
 
-    private String description;
+    private String identifier;
     private int roomCount;
     private String address;
     private int floor;
     private double price;
 
-    public Apartment(String description, int roomCount, String address, int floor, double price) {
-        this.description = description;
+    public Apartment(String identifier, int roomCount, String address, int floor, double price) {
+        this.identifier = identifier;
         this.roomCount = roomCount;
         this.address = address;
         this.floor = floor;
@@ -21,12 +21,12 @@ public class Apartment implements Serializable {
 
     public Apartment() {}
 
-    public String getDescription() {
-        return description;
+    public String getIdentifier() {
+        return identifier;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
     }
 
     public int getRoomCount() {
@@ -64,7 +64,7 @@ public class Apartment implements Serializable {
     @Override
     public String toString() {
         return "Apartment{" +
-                "description='" + description + '\'' +
+                "identifier='" + identifier + '\'' +
                 ", roomCount=" + roomCount +
                 ", address='" + address + '\'' +
                 ", floor=" + floor +
@@ -77,11 +77,11 @@ public class Apartment implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Apartment apartment = (Apartment) o;
-        return roomCount == apartment.roomCount && floor == apartment.floor && Double.compare(apartment.price, price) == 0 && Objects.equals(description, apartment.description) && Objects.equals(address, apartment.address);
+        return roomCount == apartment.roomCount && floor == apartment.floor && Double.compare(apartment.price, price) == 0 && Objects.equals(identifier, apartment.identifier) && Objects.equals(address, apartment.address);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(description, roomCount, address, floor, price);
+        return Objects.hash(identifier, roomCount, address, floor, price);
     }
 }

@@ -12,6 +12,10 @@ public class Apartments4Sale {
     private XMLEncoder encoder;
     private XMLDecoder decoder;
 
+    public Apartments4Sale(File apartmentsInfoFile) {
+        this.apartmentsInfoFile = apartmentsInfoFile;
+        this.apartmentsForSale = getApartmentsFromXml();
+    }
 
     public Apartments4Sale(List<Apartment> apartmentsForSale, File apartmentsInfoFile) {
         this.apartmentsForSale = apartmentsForSale;
@@ -42,20 +46,13 @@ public class Apartments4Sale {
             e.printStackTrace();
         }
 
-        apartmentsForSale.stream().forEach(encoder::writeObject);
+        encoder.writeObject(apartmentsForSale);
         encoder.close();
     }
 
-    public void writeSingleApartmentToXml(Apartment apartment) {
-
-        try {
-            this.encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(apartmentsInfoFile)));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        encoder.writeObject(apartment);
-        encoder.close();
+    public void addApartment(Apartment apartment) {
+        apartmentsForSale.add(apartment);
+        writeAllApartmentsToXml();
     }
 
     public void rewriteApartmentInXml(Apartment apartment) {
@@ -71,19 +68,12 @@ public class Apartments4Sale {
         encoder.close();
     }
 
-    public void deleteApartmentFromXml(Apartment apartment) {
-
-        try {
-            this.encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(apartmentsInfoFile)));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        encoder.remove(apartment);
-        encoder.close();
+    public void deleteApartment(Apartment apartment) {
+        apartmentsForSale.remove(apartment);
+        writeAllApartmentsToXml();
     }
 
-    public Apartment getApartmentFromXml() {
+    public List<Apartment> getApartmentsFromXml() {
 
         try {
             this.decoder = new XMLDecoder(new BufferedInputStream(new FileInputStream(apartmentsInfoFile)));
@@ -91,7 +81,7 @@ public class Apartments4Sale {
             e.printStackTrace();
         }
 
-        return (Apartment) decoder.readObject();
+        return (List<Apartment>) decoder.readObject();
     }
 
 }

@@ -11,23 +11,25 @@ public class ApartmentsSale {
     private static List<Apartment> apartmentList = new ArrayList<>();
 
     public static void main(String[] args) {
+
         fillApartmentList();
 
-        apartments4Sale = new Apartments4Sale(apartmentList,
+        apartments4Sale = new Apartments4Sale(
                 new File("C:\\Users\\Professional\\IdeaProjects\\Core_Tasks\\Task41\\src\\main\\resources\\apartments-info-file.xml"));
 
-        apartments4Sale.writeAllApartmentsToXml();
 
+        System.out.println(apartments4Sale.getApartmentsForSale());
 
-        System.out.println(apartments4Sale.getApartmentFromXml());
+        Apartment apartmentForTest = new Apartment("apartment5", 2, "Telihi 8", 10, 7000.00);
 
-        //apartments4Sale.writeSingleApartmentToXml(new Apartment("apartment5", 4, "Telihi 12", 10, 20000.00));
+        //apartments4Sale.addApartment(apartmentForTest);
+        apartments4Sale.deleteApartment(apartmentForTest);
     }
 
     private static void fillApartmentList() {
-        apartmentList.add(new Apartment("apartment1", 2, "Chokilivskii 1", 5, 4500.00));
-        apartmentList.add(new Apartment("apartment2", 3, "Simirenka 14", 1, 10000.00));
-        apartmentList.add(new Apartment("apartment3", 2, "Melnikova 5", 4, 6000.00));
-        apartmentList.add(new Apartment("apartment4", 1, "Dorogozhizkaya 8", 7, 5500.00));
+        apartmentList.add(new Apartment("apartment1", 3, "Simirenka", 8, 1000.00));
+        apartmentList.add(new Apartment("apartment2", 2, "Zholudeva", 3, 4500.00));
+        apartmentList.add(new Apartment("apartment3", 3, "Khreshatyk", 6, 15000.00));
+        apartmentList.add(new Apartment("apartment4", 1, "Herzena", 15, 8000.00));
     }
 }
